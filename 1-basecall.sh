@@ -16,7 +16,7 @@ modbase_models=(
     dna_r10.4.1_e8.2_400bps_sup@v5.2.0_6mA@v1
 )
 for model in "${main_model}" "${modbase_models[@]}"; do
-    dorado download \
+    /opt/logsdon_lab/dorado-1.1.1-linux-x64/bin/dorado download \
     --model "${model}" \
     --models-directory data/models
 done
@@ -28,7 +28,7 @@ for id in "${ids[@]}"; do
         ${s3_uri}/${id}.pod5 \
         data/pod5/${id}.pod5
 
-    dorado basecaller \
+    /opt/logsdon_lab/dorado-1.1.1-linux-x64/bin/dorado basecaller \
         "${main_model}" \
         --modified-bases-models "${modbase_models_str}" \
         data/pod5/${id}.pod5 \

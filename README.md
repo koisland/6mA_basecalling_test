@@ -3,8 +3,7 @@
 ## Setup
 Ensure dorado `v1.1.1` in path. 
 ```bash
-alias dorado="/opt/logsdon_lab/dorado-1.1.1-linux-x64/bin/dorado"
-dorado --version
+/opt/logsdon_lab/dorado-1.1.1-linux-x64/bin/dorado --version
 ```
 
 Create environment for the rest.
