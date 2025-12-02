@@ -29,7 +29,7 @@ for id in "${ids[@]}"; do
         data/pod5/${id}.pod5
 
     /opt/logsdon_lab/dorado-1.1.1-linux-x64/bin/dorado basecaller \
-        "${main_model}" \
+        "data/models/${main_model}" \
         --modified-bases-models "${modbase_models_str}" \
         data/pod5/${id}.pod5 \
         > data/ubam/${id}.bam 2> data/ubam/${id}.log
