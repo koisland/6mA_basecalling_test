@@ -34,3 +34,6 @@ for id in "${ids[@]}"; do
         data/pod5/${id}.pod5 \
         > data/ubam/${id}.bam 2> data/ubam/${id}.log
 done
+
+# Get summary
+python seq_stats.py data/ubam/*.bam -r | column -t > summary.tsv
